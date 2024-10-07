@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f293a;
+}
+#logincontainer{
+  position: absolute;
+   width: 400px;
+  
+}
+#logincontainer form{
+    width: 100%;
+    padding: 0 50px;
+    
+}
+h2{
+    font-size: 2em;
+  text-align: center;
+  color:aqua
+}
+.inputBox{
+    position: relative;
+    margin: 25px 0px;
+}
+.inputBox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    border-radius: 40px;
+    transition: .5s ease;
+}
+.inputBox input:focus,
+.inputBox input:valid{
+    border-color: #0ef;
+}
+.inputBox label{
+    position: absolute;
+    top: 50%;           
+    left: 20px;
+    transform:translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    transition: .2s ease;
+}
+.inputBox input:focus~label,
+.inputBox input:valid~label{
+    top: 1px;
+    font-size: .8em;
+    background:#1f293a;
+    padding: 0px 6px;
+    color: #0ef;
+}
+.forgetPassword{
+    text-align: center;
+    margin: -15px 0px;
+}
+.forgetPassword a{
+    font-size: .85em;
+    text-decoration: none;
+    color: aliceblue;
+}
+.forgetPassword a:hover{
+    text-decoration: underline;
+}
+.btn{
+    margin-top: 30px;
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: #0ef;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #1f293a;
+    font-weight: 600;
+}
+#signUp {
+
+text-align: center;
+margin-top: 30px;
+
+
+}
+#signUp a{
+
+    font-weight: 200;
+    color: #0ef;
+    text-decoration: none;
+
+
+}
+#signUp a:hover{
+    text-decoration: underline;
+}
+#lord{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#lord span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #2c4766;
+    border-radius: 8px;
+    transform-origin: 125px;
+    transform:scale(2.2) rotate(calc(var(--i)*(360deg/50)));
+    animation:animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+}
+
+@keyframes animateBlink{
+    0%{
+        background: #0ef;
+    }
+    25%{
+        background: #2c4766;
+    }
+}
